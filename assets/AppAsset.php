@@ -23,8 +23,6 @@ class AppAsset extends AssetBundle
         'css/site.css',
     ];
     public $js = [
-        "https://fb.me/react-15.1.0.min.js",
-        "https://fb.me/react-dom 15.1.0.min.js","https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js",
     ];
     public $depends = [
         'yii\web\YiiAsset',
