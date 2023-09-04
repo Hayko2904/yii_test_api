@@ -50,7 +50,8 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                ['class' => \yii\rest\UrlRule::class, 'controller' => 'news']
+                ['class' => \yii\rest\UrlRule::class, 'controller' => 'news'],
+                '<url:(.*)>' => 'site/index',
             ],
         ],
 
