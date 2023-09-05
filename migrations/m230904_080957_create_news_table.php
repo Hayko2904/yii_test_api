@@ -12,7 +12,7 @@ class m230904_080957_create_news_table extends Migration
      */
     public function safeUp()
     {
-        $this->createTable('{{%news}}', [
+        $this->createTable('{{%News}}', [
             'id' => $this->primaryKey(),
             'title' => $this->string(255),
             'description' => $this->string(255),

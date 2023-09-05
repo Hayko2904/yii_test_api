@@ -1,5 +1,5 @@
 export const getAll = () => {
-    return fetch("http://localhost:8080/news", {
+    return fetch("http://localhost:8000/news", {
         method: "GET",
         cache: 'no-cache',
         mode: 'cors'})
@@ -7,7 +7,7 @@ export const getAll = () => {
 };
 
 export const deleteItem = (id) => {
-    return fetch("http://localhost:8080/news/" + id,{
+    return fetch("http://localhost:8000/news/" + id,{
         method: "DELETE",
         cache: 'no-cache',
         mode: 'cors'})
@@ -15,7 +15,7 @@ export const deleteItem = (id) => {
 };
 
 export const editItem = (id, data) => {
-    return fetch("http://localhost:8080/news/" + id,{
+    return fetch("http://localhost:8000/news/" + id,{
         method: "PUT",
         cache: 'no-cache',
         body: JSON.stringify(data),
