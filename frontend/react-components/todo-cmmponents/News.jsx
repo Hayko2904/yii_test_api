@@ -1,11 +1,13 @@
 import React, {useEffect, useState} from "react";
 import {editItem, deleteItem, getAll} from "../../service";
 import Button from "../components/Button";
+import Create from "./NewsCreate";
 
 const News = () => {
     const [news, setNews] = useState([]);
     const [editable, setEditable] = useState([]);
     const [editData, setEditData] = useState({});
+    const [isOpenPopup, setIsOpenPopup] = useState(false);
 
     useEffect(() => {
         getAll().then(response => {
@@ -32,7 +34,19 @@ const News = () => {
 
     return (
         <>
-            <Button className="btn btn-primary" content='Create' />
+            <Button
+                className="btn btn-primary"
+                content='Create'
+                onClick={() => {
+                    setIsOpenPopup(!isOpenPopup)
+                }}
+            />
+            <Create
+                isOpen={isOpenPopup}
+                closePopup={() => {
+                    setIsOpenPopup(!isOpenPopup)
+                }}
+            />
             <table className="table">
                 <thead>
                 <tr>
