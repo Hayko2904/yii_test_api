@@ -51,7 +51,6 @@ $config = [
             'showScriptName' => false,
             'rules' => [
                 ['class' => \yii\rest\UrlRule::class, 'controller' => 'news'],
-                '<url:(.*)>' => 'site/index',
             ],
         ],
 
